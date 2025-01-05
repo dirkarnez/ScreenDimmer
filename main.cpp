@@ -18,11 +18,8 @@ int WINAPI WinMain(
 	//Make the screen darker:
 	GammaRamp.SetBrightness(NULL, 64);
 
-	//Wait 3 seconds:
-	Sleep(3000);
-
 	//Return back to normal:
-	GammaRamp.SetBrightness(NULL, 128);
+	//GammaRamp.SetBrightness(NULL, 128);
 
 	return 0;
 }
