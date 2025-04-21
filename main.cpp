@@ -16,7 +16,7 @@ int WINAPI WinMain(
 	CGammaRamp GammaRamp;
 
 	//Make the screen darker:
-	GammaRamp.SetBrightness(NULL, 20);
+	GammaRamp.SetBrightness(NULL, 10);
 
 	//Return back to normal:
 	//GammaRamp.SetBrightness(NULL, 128);
