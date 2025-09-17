@@ -1,4 +1,4 @@
-#include <windows.h>
+#include <iostream>
 #include "gammaramp.h"
 
 
@@ -9,7 +9,7 @@
 //   int nCmdShow              // show state
 // )
 
-#include <iostream>
+
 
 int main(int argc, char * argv[])
 {
@@ -18,14 +18,14 @@ int main(int argc, char * argv[])
 	//Video cards.
 
 	CGammaRamp GammaRamp;
-	string command = std::string(argv[1]);
+	std::string command = std::string(argv[1]);
 	
 	if (command == "on") {
 		//Make the screen darker:
 		GammaRamp.SetBrightness(NULL, 10);
 	} else if (command == "off") {
 		//Return back to normal:
-		//GammaRamp.SetBrightness(NULL, 128);
+		GammaRamp.SetBrightness(NULL, 128);
 	}
 
 	return 0;
