@@ -1,7 +1,7 @@
 #ifndef GAMMARAMP_H_
 #define GAMMARAMP_H_
 
-
+#include <windows.h>
 /*
 CGammaRamp class
 
