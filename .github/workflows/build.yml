@@ -94,11 +94,18 @@ jobs:
             cd cmake-build &&^
             cmake --build . --config Release
 
+      - shell: bash
+        run: |
+          cp ./on.cmd ./off.cmd ./cmake-build/
+
       - name: Archive Release
         uses: thedoctor0/zip-release@master
         with:
           type: 'zip'
-          path: ScreenDimmer.exe
+          path: |
+            ScreenDimmer.exe
+            on.cmd
+            off.cmd
           directory: "cmake-build"
           filename: "${{ github.event.repository.name }}-${{ github.ref_name }}-${{ matrix.compiler.name }}.zip"
         
